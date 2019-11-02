@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: mdillon/postgis:11-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: infraction
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data

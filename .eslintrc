@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb-base",
+  "root": true,
+  "rules": {
+    "no-console": "off",
+    "import/named": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ]
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {}
+    }
+  }
+}
