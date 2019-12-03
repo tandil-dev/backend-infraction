@@ -5,15 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "start:dev": "NODE_ENV='development' nodemon src/index.js --exec babel-node",
-    "clean": "rimraf dist/*",
+    "clean": "rimraf api/*",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && babel src -d dist",
+    "build": "npm run clean && babel src -d api",
     "lint": "eslint -c .eslintrc src",
     "migration:create:dev": "NODE_ENV=development sequelize migration:create --name",
     "db:migrate:dev": "NODE_ENV=development sequelize db:migrate",
     "db:migrate:undo:dev": "NODE_ENV=development sequelize db:migrate:undo",
     "prestart": "npm run build",
-    "start": "sequelize db:migrate && node dist/index.js",
+    "start": "sequelize db:migrate && node api/index.js",
     "generateToken": "nodemon scripts/generateToken.js --exec babel-node"
   },
   "repository": {
