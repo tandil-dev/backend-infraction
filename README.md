@@ -1,8 +1,10 @@
 # backend-infraction
 ## Requirements
 
-- Docker for running DB
+- Download and install Docker
+  https://hub.docker.com/?overlay=onboarding
 
+- Docker for running DB
 
 
 ## Running the server locally
@@ -15,6 +17,7 @@ $ docker-compose up
 
 Run server, from root direcory 
 ```bash
+$ npm install
 $ npm run start:dev
 ```
 
