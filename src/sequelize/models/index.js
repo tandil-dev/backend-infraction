@@ -10,17 +10,21 @@ if (config.env !== 'development') {
   logging = false;
 }
 
-const sequelize = new Sequelize(
-  config.database.database,
-  config.database.username,
-  config.database.password,
-  {
-    dialect: config.database.dialect,
-    host: config.database.host,
-    port: config.database.port,
-    logging,
-  },
-);
+const dbConfig = config.database.url ? [config.database.url, { logging }]
+  : [
+    config.database.database,
+    config.database.username,
+    config.database.password,
+    {
+      dialect: config.database.dialect,
+      host: config.database.host,
+      port: config.database.port,
+      logging,
+    },
+  ];
+
+console.log('DB - Config', dbConfig[0]);
+const sequelize = new Sequelize(...dbConfig);
 
 // Test Sequelize connection
 sequelize.authenticate()
