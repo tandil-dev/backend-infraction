@@ -1,0 +1,10 @@
+{
+  "env": {
+    "DB_URL": "@db_url",
+    "PORT": "@port",
+    "JWT_SECRET": "@jwt_secret",
+    "JWT_DURATION": "@jwt_duration",
+    "CORS_DOMAIN": "@cors_domain",
+    "UPLOAD_MAX_SIZE": "@upload_max_size"
+  }
+}
