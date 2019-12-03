@@ -67,3 +67,4 @@ data
 build-docker.sh
 
 *.zip
+dist/
