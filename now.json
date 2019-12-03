@@ -1,4 +1,10 @@
 {
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@now/node"
+    }
+  ],
   "env": {
     "DB_URL": "@db_url",
     "PORT": "@port",

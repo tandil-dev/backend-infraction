@@ -45,6 +45,7 @@
     "rimraf": "^3.0.0"
   },
   "dependencies": {
+    "@now/node": "^1.2.0",
     "@sendgrid/mail": "^6.4.0",
     "apollo-server": "^2.9.7",
     "aws-sdk": "^2.569.0",
