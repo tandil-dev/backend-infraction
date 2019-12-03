@@ -13,7 +13,7 @@
     "db:migrate:dev": "NODE_ENV=development sequelize db:migrate",
     "db:migrate:undo:dev": "NODE_ENV=development sequelize db:migrate:undo",
     "prestart": "npm run build",
-    "start": "sequelize db:migrate && node api/index.js",
+    "start": "sequelize db:migrate && nodemon src/index.js --exec babel-node",
     "generateToken": "nodemon scripts/generateToken.js --exec babel-node"
   },
   "repository": {
