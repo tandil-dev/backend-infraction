@@ -1,5 +1,9 @@
 {
   "version": 1,
+  "alias": [
+    "backend-infraction.now.sh",
+    "backend-infraction.tandil.dev"
+  ],
   "env": {
     "DB_URL": "@db_url",
     "PORT": "@port",
